@@ -10,7 +10,7 @@ public class Component1ReactEndpoint {
 
     @Nonnull
     public String sayHello(@Nonnull String name) {
-        if (name.isEmpty()) {
+        if (name == null || name.isEmpty()) {
             return "Hello stranger (component1-backend)";
         } else {
             return "Hello " + name+ " (component1-backend)";
