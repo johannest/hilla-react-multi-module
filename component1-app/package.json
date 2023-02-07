@@ -139,7 +139,7 @@
     "hash": "bd88bf2b58a22f818fac3794445e0e519fb67ac913c7bfa943f229d9fc59d331"
   },
   "description": "Do not use. Just testing NPM packages",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "main": "frontend/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

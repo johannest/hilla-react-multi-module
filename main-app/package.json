@@ -129,7 +129,7 @@
     "@vaadin/vertical-layout": "23.3.5",
     "@vaadin/virtual-list": "23.3.5",
     "classnames": "^2.3.2",
-    "component1-lib": "^1.0.3",
+    "component1-lib": "^1.0.5",
     "component2-lib": "^1.0.3",
     "construct-style-sheets-polyfill": "3.1.0",
     "line-awesome": "1.3.0",
@@ -440,6 +440,6 @@
       "workbox-core": "6.5.4",
       "workbox-precaching": "6.5.4"
     },
-    "hash": "81e2d6e76ea2b4b9c9c6d20909bb28bcfff95a04e1813eb44765c116fe1d88eb"
+    "hash": "d470a6ec237730c39a28c9391e7e2ea1964ca1b2d3af3f6119a448461d41466e"
   }
 }

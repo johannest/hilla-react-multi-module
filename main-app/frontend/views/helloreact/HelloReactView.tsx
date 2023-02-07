@@ -3,9 +3,11 @@ import { Notification } from '@hilla/react-components/Notification.js';
 import { TextField } from '@hilla/react-components/TextField.js';
 import { HelloReactEndpoint } from 'Frontend/generated/endpoints';
 import { useState } from 'react';
+import { usePerson } from "../../PersonContext";
 
 export default function HelloReactView() {
   const [name, setName] = useState('');
+  const {getPerson, setPerson} = usePerson();
 
   return (
     <>
@@ -23,6 +25,11 @@ export default function HelloReactView() {
           }}
         >
           Say hello
+        </Button>
+        <Button onClick={() => {
+            setPerson({name: name})
+        }}>
+          Send text to component 1 props
         </Button>
       </section>
     </>

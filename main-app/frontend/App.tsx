@@ -1,6 +1,7 @@
 import router from 'Frontend/routes.js';
 import { RouterProvider } from 'react-router-dom';
+import {PersonContext} from "Frontend/PersonContext";
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  return <PersonContext><RouterProvider router={router} /></PersonContext>;
 }

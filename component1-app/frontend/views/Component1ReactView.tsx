@@ -4,7 +4,14 @@ import {TextField} from '@hilla/react-components/TextField.js';
 import {Component1ReactEndpoint} from 'Frontend/generated/endpoints';
 import {useState} from 'react';
 
-export default function Component1ReactView() {
+type Props = {
+    person: Person | undefined
+}
+type Person = {
+    name: string
+}
+
+export default function Component1ReactView({ person }: Props) {
     const [name, setName] = useState('');
 
     return (
@@ -13,6 +20,7 @@ export default function Component1ReactView() {
             <section className="flex p-m gap-m items-end">
                 <TextField
                     label="Your name"
+                    value={person?.name}
                     onValueChanged={(e) => {
                         setName(e.detail.value);
                     }}
