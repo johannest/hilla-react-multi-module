@@ -13,7 +13,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
  * and some desktop browsers.
  *
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = { "com.example.application" })
 @Theme(value = "main-app")
 public class Application extends SpringBootServletInitializer implements AppShellConfigurator {
 
