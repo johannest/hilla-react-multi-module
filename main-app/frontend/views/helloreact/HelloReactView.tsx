@@ -1,7 +1,7 @@
 import { Button } from '@hilla/react-components/Button.js';
 import { Notification } from '@hilla/react-components/Notification.js';
 import { TextField } from '@hilla/react-components/TextField.js';
-import { HelloReactEndpoint } from 'Frontend/generated/endpoints';
+import {Component1ReactEndpoint, Component2ReactEndpoint, HelloReactEndpoint} from 'Frontend/generated/endpoints';
 import { useState } from 'react';
 import { usePerson } from "../../PersonContext";
 
@@ -25,6 +25,22 @@ export default function HelloReactView() {
           }}
         >
           Say hello
+        </Button>
+        <Button
+          onClick={async () => {
+            const serverResponse = await Component1ReactEndpoint.sayHello(name);
+            Notification.show(serverResponse);
+          }}
+        >
+          Say hello with Component 1
+        </Button>
+        <Button
+          onClick={async () => {
+            const serverResponse = await Component2ReactEndpoint.sayHello(name);
+            Notification.show(serverResponse);
+          }}
+        >
+          Say hello with Component 2
         </Button>
         <Button onClick={() => {
             setPerson({name: name})
